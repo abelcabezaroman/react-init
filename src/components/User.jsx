@@ -8,15 +8,15 @@ export default class User extends React.Component {
             {
                 name: 'Abel Cabeza',
                 years: 25,
-                rol: 'Profesor'
+                role: 'Profesor'
             }, {
                 name: 'Rolo',
                 years: 25,
-                rol: 'Estudiante'
+                role: 'Estudiante'
             }, {
                 name: 'Karen',
                 years: 23,
-                rol: 'Estudiante'
+                role: 'Estudiante'
             }
         ]
     }
@@ -36,14 +36,14 @@ export default class User extends React.Component {
         })
     }
 
-    addUser = () => {
-        
+    addUser = (user) => {
+        this.setState({users: [...this.state.users, user]})
     }
 
     render() {
         return (
             <>
-                <UserForm></UserForm>
+                <UserForm fnAddUser={this.addUser}></UserForm>
                 <UserList users={this.state.users} fnRemoveUser={this.removeUser}></UserList>
             </>
         )
