@@ -6,6 +6,8 @@ import HelloWorld from './components/HelloWorld'
 import HelloProps from './components/HelloProps'
 import ButtonProps from './components/ButtonProps'
 import List from './components/List';
+import Counter from './components/Counter';
+import User from './components/User';
 
 function App() {
   let nameFather = 'Lelouch Lamperouge';
@@ -25,6 +27,10 @@ function App() {
         <ButtonProps text='Cancelar'></ButtonProps>
         <List list={['Aceitunas', 'Jamon serrano', 'Levadura', 'Limón']}></List>
         
+        <Counter/>
+
+        <User></User>
+
       </header>
     </div>
   );

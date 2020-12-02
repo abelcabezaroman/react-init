@@ -11,7 +11,7 @@ export default class List extends React.Component {
 
         return (
             <ul>
-                {this.props.list.map(el => <li>{el}</li>)}
+                {this.props.list.map((el, index) => <li key={index}>{el}</li>)}
                 {/* {listToRender} */}
             </ul>
         )
